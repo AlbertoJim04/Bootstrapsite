@@ -5,7 +5,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="Final.css">
+<!-- Import for Jquery hosted by google-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+      $( "#accordion" ).accordion();
+    } );
+    </script>
 </head>
+<!-- Gradient background openning tag-->
+<div id="grad1">
 <body>
     <div id= "wrapper">
         <h1>Dent Master</h1>
@@ -24,6 +37,7 @@
 <img src="dm3.JPG" width="320"
 height="250" alt="Yurts">
 <div>
+    
 <h3>Who is Dent Master</h3>
 <p>Dent Master is a PDR company that travels
     all over the nation. We chance stroms
@@ -38,7 +52,49 @@ height="250" alt="Yurts">
 
 </p>
  </div>
-<br>
+  <!-- JQUERY added accordian feature for FAQ -->
+ <h2>FAQ<h5>(Pleasle Click on question)</h5></h2>
+ <hr>
+ <div id="accordion">
+    <h3>Why is are the repairs "Free" to some costumers?</h3>
+    <div>
+      <p>
+      If the costumer has Full Covereage for the damaged vehicle, then they are eligble for a Free repair.
+      All expenses will be paid on behalf of the insurance. Dent Master will also pay your Deductible.
+      </p>
+    </div>
+    <h3>How long do repairs usually take?</h3>
+    <div>
+      <p>
+      It depends on how the damage on the vehicle is. On average about 5 days.
+      </p>
+    </div>
+    <h3>Does Dent Master Provide Loner cars?</h3>
+    <div>
+      <p>
+      Yes.However, we prefer for the costumer to have Rental car insurance. We also require the following 
+      verification before we lend a vehicle:
+      </p>
+      <ul>
+        <li>Valid Drivers License</li>
+        <li>Sign a No-liability Waiver</li>
+        <li>Sign a Agreement Waiver</li>
+      </ul>
+    </div>
+    <h3>Do I need to bring a estimate before I make an appoinment?</h3>
+    <div>
+      <p>
+      No, Dent Master can do an estimate for you. Insurance companies are known for 
+      "Low Balling" the estimate to save money. We will make sure we estimate your vehicle for 
+      what it acctually costs to fix.
+      </p>
+      <p>
+      If you already have an estimate from someone else, then Dent Master will write a new one and will
+      supplement any additional damage that the previous estemator mightive missed.
+      </p>
+    </div>
+  </div>
+<br><hr>
 <h3>Dent Master Matrix</h3>
 <p>Here is a "Ball park" estimate for repair costs.</p>
 <table>
@@ -74,4 +130,11 @@ height="250" alt="Yurts">
 </div>
 </div>
 </body>
+</div><!-- End tag for CSS3 linear gradient background -->
+<!-- JavaScript: Showcases current date and time for the costumer -->
+<p>Date/Time: <span id="datetime"></span></p>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
 </html>

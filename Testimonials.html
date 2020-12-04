@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="Final.css">
 </head>
+<!-- Gradient background openning tag-->
+<div id="grad1">
 <body>
     <div id= "wrapper">
         <h1>Dent Master</h1>
@@ -19,6 +21,7 @@
 
         </b> </ul>
     </div>
+     <!-- Update feedback testimonials from costumers -->
 <div id="content">
 <h2>Hear from our satisfied clients</h2> 
 <img src="kevin.JPG"  width="260"height="200"  alt="Activities">
@@ -38,4 +41,11 @@
 </div>
 </div>
 </body>
+</div><!-- End tag for CSS3 linear gradient background -->
+<!-- JavaScript: Showcases current date and time for the costumer -->
+<p>Date/Time: <span id="datetime"></span></p>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
 </html>

@@ -9,6 +9,8 @@
         <link href="Final.css" rel="stylesheet"
                               type="text/css">
     </head>
+    <!-- Gradient background openning tag-->
+    <div id="grad1">
     <body>
         <div id= "wrapper">
             <h1>Dent Master</h1>
@@ -22,6 +24,7 @@
 
             </b> </ul>
         </div>
+         <!-- Costumer information input -->
         <div id="content">
         <h2>Reservations- Dent Master </h2>
         <h3>Schedule an appointment with Us Today! Follow Us our Webpage: <a href="https://www.dentmasterwichita.com/">Dent Master Wichita</a> </h3>
@@ -70,4 +73,11 @@
         </div>
         </div>
     </body>
+</div><!-- End tag for CSS3 linear gradient background -->
+<!-- JavaScript: Showcases current date and time for the costumer -->
+<p>Date/Time: <span id="datetime"></span></p>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
 </html>
